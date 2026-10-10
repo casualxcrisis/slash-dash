@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://hwv5ibukjeph"]
+
+[ext_resource type="PackedScene" uid="uid://cl8dl2kd2sm1i" path="res://scenes/player/player_controller.tscn" id="1_1ykrc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kps3k"]
+size = Vector3(2.005, 0.015, 2.005)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0yd1l"]
+
+[node name="PrototypeLevel" type="Node3D" unique_id=1175846320]
+
+[node name="Test_Floor" type="StaticBody3D" parent="." unique_id=839922846]
+transform = Transform3D(6.87, 0, 0, 0, 6.87, 0, 0, 0, 6.87, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Test_Floor" unique_id=1863680885]
+shape = SubResource("BoxShape3D_kps3k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Test_Floor" unique_id=2077957834]
+mesh = SubResource("PlaneMesh_0yd1l")
+
+[node name="Test_Floor2" type="StaticBody3D" parent="." unique_id=218575807]
+transform = Transform3D(6.87, 0, 0, 0, 6.87, 0, 0, 0, 6.87, 0, 0, -13.61936)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Test_Floor2" unique_id=611532994]
+shape = SubResource("BoxShape3D_kps3k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Test_Floor2" unique_id=1970218535]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 0, -0.016540527)
+mesh = SubResource("PlaneMesh_0yd1l")
+
+[node name="PlayerController" parent="." unique_id=874567396 instance=ExtResource("1_1ykrc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1028152, 0)

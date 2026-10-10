@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cl8dl2kd2sm1i"]
+
+[ext_resource type="Script" uid="uid://dacski64kkbbf" path="res://assets/scripts/player/player_controller.gd" id="1_4q5nu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0yd1l"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_0yd1l"]
+
+[node name="PlayerController" type="CharacterBody3D" unique_id=874567396]
+script = ExtResource("1_4q5nu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=311135463]
+shape = SubResource("CapsuleShape3D_0yd1l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=742398682]
+mesh = SubResource("CapsuleMesh_0yd1l")
+
+[node name="Camera_Controller" type="Node3D" parent="." unique_id=1370970947]
+
+[node name="Camera3D" type="Camera3D" parent="Camera_Controller" unique_id=666543645]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.174487)
