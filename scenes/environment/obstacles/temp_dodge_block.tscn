@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bgejbdy2e6efk"]
+
+[ext_resource type="Texture2D" uid="uid://cwtdjo1u2xv36" path="res://assets/textures/Prototyping Textures (32px)/Prototype_orange_32x32px.png" id="1_ec2cp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uf4lm"]
+albedo_texture = ExtResource("1_ec2cp")
+uv1_scale = Vector3(3.11, 4.045, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uf4lm"]
+size = Vector3(1, 2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ec2cp"]
+size = Vector3(1, 2, 1)
+
+[node name="temp_dodge_block" type="StaticBody3D" unique_id=2100093211]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=246740145]
+material_override = SubResource("StandardMaterial3D_uf4lm")
+mesh = SubResource("BoxMesh_uf4lm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1484040499]
+shape = SubResource("BoxShape3D_ec2cp")
