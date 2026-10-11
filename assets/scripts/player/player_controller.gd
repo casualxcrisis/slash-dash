@@ -37,7 +37,14 @@ func _physics_process(delta: float) -> void:
 		target_lane -= 1
 	if Input.is_action_just_pressed("move_right") and target_lane < Lane.LEFT:
 		target_lane += 1
-		
+	
+	#auto run
+	target_velocity.z = speed
+	
 	#set movement
 	velocity = target_velocity
 	move_and_slide()
+
+
+
+	
