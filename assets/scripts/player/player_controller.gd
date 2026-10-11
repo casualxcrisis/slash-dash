@@ -23,7 +23,7 @@ var target_velocity = Vector3.ZERO
 
 
 func _physics_process(delta: float) -> void:
-	#handle jump
+	#jump
 	if not is_on_floor():
 		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 		target_lane += 1
 	
 	#auto run
-	#target_velocity.z = speed
+	target_velocity.z = speed
 	
 	#set movement
 	velocity = target_velocity

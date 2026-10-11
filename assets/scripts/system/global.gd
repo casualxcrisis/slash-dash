@@ -1,4 +1,4 @@
 extends Node
 
 #player
-var run_speed = -10.0
+var run_speed = -8.0
