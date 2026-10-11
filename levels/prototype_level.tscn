@@ -1,41 +1,17 @@
 [gd_scene format=3 uid="uid://hwv5ibukjeph"]
 
 [ext_resource type="PackedScene" uid="uid://cl8dl2kd2sm1i" path="res://scenes/player/player_controller.tscn" id="1_1ykrc"]
+[ext_resource type="PackedScene" uid="uid://rck4ertvh2ij" path="res://scenes/environment/ground/temp_ground.tscn" id="1_htrvu"]
 [ext_resource type="PackedScene" uid="uid://v2y8rwx27f7a" path="res://scenes/environment/sky/place_holder_sky.tscn" id="2_ycx7s"]
-[ext_resource type="PackedScene" uid="uid://dcn6xhdh6mjct" path="res://scenes/environment/obstacles/temp_jump_block.tscn" id="3_htrvu"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_kps3k"]
-size = Vector3(1.25, 0.06, 40)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_0yd1l"]
-size = Vector2(1.25, 40)
 
 [node name="PrototypeLevel" type="Node3D" unique_id=1175846320]
 
 [node name="BaseGround" type="Node3D" parent="." unique_id=2000593947]
 
-[node name="Test_Floor" type="StaticBody3D" parent="BaseGround" unique_id=839922846]
-transform = Transform3D(6.87, 0, 0, 0, 6.87, 0, 0, 0, 6.87, 0, 0, -136.1987)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="BaseGround/Test_Floor" unique_id=1863680885]
-shape = SubResource("BoxShape3D_kps3k")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="BaseGround/Test_Floor" unique_id=2077957834]
-mesh = SubResource("PlaneMesh_0yd1l")
+[node name="StaticBody3D" parent="BaseGround" unique_id=337221563 instance=ExtResource("1_htrvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112645686, 0, 0)
 
 [node name="PlayerController" parent="." unique_id=874567396 instance=ExtResource("1_1ykrc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0319188, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03851831, 1.0319188, 0)
 
 [node name="PlaceHolderSky" parent="." unique_id=1052989512 instance=ExtResource("2_ycx7s")]
-
-[node name="StaticBody3D" parent="." unique_id=355025997 instance=ExtResource("3_htrvu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6292093, 0.70610046, -12.655256)
-
-[node name="StaticBody3D2" parent="." unique_id=1408295616 instance=ExtResource("3_htrvu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.118038, 0.70610046, -17.894941)
-
-[node name="StaticBody3D3" parent="." unique_id=2115233117 instance=ExtResource("3_htrvu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.118038, 0.70610046, -48.174255)
-
-[node name="StaticBody3D4" parent="." unique_id=1354029449 instance=ExtResource("3_htrvu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1563122, 0.70610046, -96.35266)

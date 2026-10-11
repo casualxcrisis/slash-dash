@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 		target_lane += 1
 	
 	#auto run
-	target_velocity.z = speed
+	#target_velocity.z = speed
 	
 	#set movement
 	velocity = target_velocity

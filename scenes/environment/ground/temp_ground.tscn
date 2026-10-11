@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://rck4ertvh2ij"]
+
+[ext_resource type="Texture2D" uid="uid://eaxtwfybj62n" path="res://assets/textures/Prototyping Textures (32px)/Prototype_blue_32x32px.png" id="1_k3ybh"]
+[ext_resource type="Texture2D" uid="uid://c3mfwimfvu60m" path="res://assets/textures/Prototyping Textures (32px)/Prototype_cyan_32x32px.png" id="2_g52b4"]
+[ext_resource type="Texture2D" uid="uid://bgss4tf8pq02w" path="res://assets/textures/Prototyping Textures (32px)/Prototype_green_32x32px.png" id="3_6rdse"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0yd1l"]
+size = Vector3(5.32, 0.25, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7mw5"]
+albedo_texture = ExtResource("1_k3ybh")
+uv1_scale = Vector3(7.51, 3.025, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kps3k"]
+material = SubResource("StandardMaterial3D_u7mw5")
+size = Vector3(1.5, 0.25, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rjgf"]
+albedo_texture = ExtResource("2_g52b4")
+uv1_scale = Vector3(10.54, 3, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_crplj"]
+material = SubResource("StandardMaterial3D_2rjgf")
+size = Vector3(2.25, 0.25, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqihf"]
+albedo_texture = ExtResource("3_6rdse")
+uv1_scale = Vector3(7.5, 3, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_m2rog"]
+material = SubResource("StandardMaterial3D_dqihf")
+size = Vector3(1.5, 0.25, 1)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=337221563]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=36903909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016222358, 0, 0)
+shape = SubResource("BoxShape3D_0yd1l")
+
+[node name="LeftLane" type="MeshInstance3D" parent="." unique_id=1683262230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7726067, 0, 0)
+mesh = SubResource("BoxMesh_kps3k")
+
+[node name="CenterLane" type="MeshInstance3D" parent="." unique_id=282102330]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0915034, 0, 0)
+mesh = SubResource("BoxMesh_crplj")
+
+[node name="RightLane" type="MeshInstance3D" parent="." unique_id=1189293724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9469402, 0, 0)
+mesh = SubResource("BoxMesh_m2rog")
