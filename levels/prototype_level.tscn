@@ -54,7 +54,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -109.34918)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23618817, 1.5395067, -4.631214)
 
 [node name="TempEnemy" parent="Obstacles/Enemies" unique_id=248807533 instance=ExtResource("2_i5e4g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30.355297)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.073025)
 
 [node name="Jump" type="Node3D" parent="Obstacles" unique_id=789942965]
 

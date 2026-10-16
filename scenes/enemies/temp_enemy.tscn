@@ -16,7 +16,7 @@ radius = 0.995
 height = 1.95
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_0yd1l"]
-radius = 1.255
+radius = 1.025
 
 [node name="TempEnemy" type="AnimatableBody3D" unique_id=248807533 groups=["enemy"]]
 script = ExtResource("1_80iq4")
