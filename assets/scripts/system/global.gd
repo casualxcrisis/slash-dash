@@ -2,6 +2,7 @@ extends Node
 
 #player
 var run_speed = -8.0
+var player_health = 100
 
 #score
 var player_score = 0

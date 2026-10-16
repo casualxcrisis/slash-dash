@@ -27,7 +27,7 @@ shape = SubResource("SphereShape3D_kps3k")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1796418334]
 mesh = SubResource("SphereMesh_0yd1l")
 
-[node name="KillHurtZone" type="Area3D" parent="." unique_id=1052804548]
+[node name="HurtZone" type="Area3D" parent="." unique_id=1052804548 groups=["enemy"]]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="KillHurtZone" unique_id=118487519]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtZone" unique_id=118487519]
 shape = SubResource("SphereShape3D_0yd1l")

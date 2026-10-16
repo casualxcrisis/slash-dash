@@ -21,33 +21,28 @@ var lane_width = 2.0 #doesn't need to change, this keeps us at three defined lan
 var target_velocity = Vector3.ZERO
 
 
-
 func _physics_process(delta: float) -> void:
 	#jump
 	if not is_on_floor():
 		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
 		target_velocity.y = jump_impulse
-	
 	#lane switching
 	var target_x = target_lane * lane_width
 	position.x = lerp(position.x, target_x, lane_change_speed * delta)
-	
 	if Input.is_action_just_pressed("move_left") and target_lane > Lane.RIGHT:
 		target_lane -= 1
 	if Input.is_action_just_pressed("move_right") and target_lane < Lane.LEFT:
 		target_lane += 1
-
 	#auto run
 	target_velocity.z = speed
-	
 	#set movement
 	velocity = target_velocity
 	move_and_slide()
 	
-	if Input.is_action_just_pressed("attack"):
-		pass
-
-
-
-	
+#hurt player if they touch enemy
+func _on_hurt_pickup_zone_body_entered(body: Node3D) -> void:
+	if body.is_in_group("enemy"):
+		Global.player_health -= 20
+		body.queue_free()
+		print("You got hurt! Player Health: ", Global.player_health)

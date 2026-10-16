@@ -8,11 +8,12 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_0yd1l"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kps3k"]
-radius = 0.58
-height = 2.015
+radius = 0.59
+height = 2.085
 
 [node name="PlayerController" type="CharacterBody3D" unique_id=874567396]
 script = ExtResource("1_4q5nu")
+fall_acceleration = 80
 
 [node name="BaseCollision" type="CollisionShape3D" parent="." unique_id=311135463]
 shape = SubResource("CapsuleShape3D_0yd1l")
@@ -20,11 +21,8 @@ shape = SubResource("CapsuleShape3D_0yd1l")
 [node name="BaseMesh" type="MeshInstance3D" parent="." unique_id=742398682]
 mesh = SubResource("CapsuleMesh_0yd1l")
 
-[node name="Camera_Controller" type="Node3D" parent="." unique_id=1370970947]
-transform = Transform3D(1, 0, 0, 0, 0.931288, 0.36428404, 0, -0.36428404, 0.931288, 0.002449274, 1.7372153, 3.1836946)
-
-[node name="Camera3D" type="Camera3D" parent="Camera_Controller" unique_id=666543645]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 0.047700975, 0.5, -0.9313055)
+[node name="Camera3D" type="Camera3D" parent="." unique_id=666543645]
+transform = Transform3D(1, 0, 0, 0, 0.8728372, 0.48801157, 0, -0.48801157, 0.8728372, 0.0314779, 2.2620666, 2.3148236)
 fov = 57.5
 
 [node name="HurtPickupZone" type="Area3D" parent="." unique_id=1803224088 groups=["player"]]
@@ -38,3 +36,5 @@ debug_color = Color(1, 0.019232832, 0.0017920041, 0.41960785)
 [node name="AttackCast" type="RayCast3D" parent="Attack" unique_id=1543532439]
 unique_name_in_owner = true
 script = ExtResource("2_iivv4")
+
+[connection signal="body_entered" from="HurtPickupZone" to="." method="_on_hurt_pickup_zone_body_entered"]
