@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dcn6xhdh6mjct" path="res://scenes/environment/obstacles/temp_jump_block.tscn" id="4_6lfjr"]
 [ext_resource type="PackedScene" uid="uid://bgejbdy2e6efk" path="res://scenes/environment/obstacles/temp_dodge_block.tscn" id="5_qd0o6"]
 [ext_resource type="PackedScene" uid="uid://c7a0rm638h68" path="res://scenes/pickups/pickup_coin.tscn" id="7_pvbb1"]
+[ext_resource type="PackedScene" uid="uid://dci7biv58x8oy" path="res://scenes/pickups/pickup_health.tscn" id="8_0bul0"]
 
 [node name="PrototypeLevel" type="Node3D" unique_id=1175846320]
 
@@ -175,3 +176,6 @@ fall_acceleration = 82
 
 [node name="PickupCoin" parent="." unique_id=82873739 instance=ExtResource("7_pvbb1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9836655, 1.2246853, -16.22847)
+
+[node name="PickupHealth" parent="." unique_id=1943708598 instance=ExtResource("8_0bul0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15447426, 1.0931773, -46.18779)
