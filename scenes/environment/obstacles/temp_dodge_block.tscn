@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bgejbdy2e6efk"]
 
-[ext_resource type="Texture2D" uid="uid://cwtdjo1u2xv36" path="res://assets/textures/Prototyping Textures (32px)/Prototype_orange_32x32px.png" id="1_ec2cp"]
+[ext_resource type="Texture2D" uid="uid://cwtdjo1u2xv36" path="res://assets/editor/Prototyping Textures (32px)/Prototype_orange_32x32px.png" id="1_ec2cp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uf4lm"]
 albedo_texture = ExtResource("1_ec2cp")

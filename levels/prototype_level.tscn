@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://v2y8rwx27f7a" path="res://scenes/environment/sky/place_holder_sky.tscn" id="2_ycx7s"]
 [ext_resource type="PackedScene" uid="uid://dcn6xhdh6mjct" path="res://scenes/environment/obstacles/temp_jump_block.tscn" id="4_6lfjr"]
 [ext_resource type="PackedScene" uid="uid://bgejbdy2e6efk" path="res://scenes/environment/obstacles/temp_dodge_block.tscn" id="5_qd0o6"]
+[ext_resource type="PackedScene" uid="uid://c7a0rm638h68" path="res://scenes/pickups/pickup_coin.tscn" id="7_pvbb1"]
 
 [node name="PrototypeLevel" type="Node3D" unique_id=1175846320]
 
@@ -171,3 +172,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, 1.9653994)
 fall_acceleration = 82
 
 [node name="PlaceHolderSky" parent="." unique_id=1052989512 instance=ExtResource("2_ycx7s")]
+
+[node name="PickupCoin" parent="." unique_id=82873739 instance=ExtResource("7_pvbb1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9836655, 1.2246853, -16.22847)

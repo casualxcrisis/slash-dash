@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c7a0rm638h68"]
+
+[ext_resource type="Script" uid="uid://hthtlpcxv28" path="res://assets/scripts/pickups/pickup_coin.gd" id="1_0d2np"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0yd1l"]
+radius = 0.19
+height = 0.795
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kps3k"]
+radius = 0.15
+height = 0.74
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0yd1l"]
+radius = 0.895
+
+[node name="PickupCoin" type="AnimatableBody3D" unique_id=82873739]
+script = ExtResource("1_0d2np")
+
+[node name="BaseCollision" type="CollisionShape3D" parent="." unique_id=548418203]
+shape = SubResource("CapsuleShape3D_0yd1l")
+debug_color = Color(0.31116587, 0.538072, 0.8468182, 0.41960785)
+
+[node name="BaseMesh" type="MeshInstance3D" parent="." unique_id=1695741849]
+mesh = SubResource("CapsuleMesh_kps3k")
+
+[node name="PickupArea" type="Area3D" parent="." unique_id=1549885580]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PickupArea" unique_id=1098969546]
+shape = SubResource("SphereShape3D_0yd1l")
+debug_color = Color(0.52940995, 0.5717124, 0, 0.41960785)
+
+[connection signal="area_entered" from="PickupArea" to="." method="_on_pickup_area_area_entered"]
