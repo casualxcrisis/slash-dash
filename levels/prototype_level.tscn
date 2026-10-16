@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cl8dl2kd2sm1i" path="res://scenes/player/player_controller.tscn" id="1_1ykrc"]
 [ext_resource type="PackedScene" uid="uid://rck4ertvh2ij" path="res://scenes/environment/ground/temp_ground.tscn" id="1_htrvu"]
+[ext_resource type="PackedScene" uid="uid://egqte8n832lp" path="res://scenes/enemies/temp_enemy.tscn" id="2_i5e4g"]
 [ext_resource type="PackedScene" uid="uid://v2y8rwx27f7a" path="res://scenes/environment/sky/place_holder_sky.tscn" id="2_ycx7s"]
 [ext_resource type="PackedScene" uid="uid://dcn6xhdh6mjct" path="res://scenes/environment/obstacles/temp_jump_block.tscn" id="4_6lfjr"]
 [ext_resource type="PackedScene" uid="uid://bgejbdy2e6efk" path="res://scenes/environment/obstacles/temp_dodge_block.tscn" id="5_qd0o6"]
@@ -46,6 +47,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -99.39891)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -109.34918)
 
 [node name="Obstacles" type="Node3D" parent="." unique_id=608701310]
+
+[node name="Enemies" type="Node3D" parent="Obstacles" unique_id=759612577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23618817, 1.5395067, -4.631214)
+
+[node name="TempEnemy" parent="Obstacles/Enemies" unique_id=248807533 instance=ExtResource("2_i5e4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30.355297)
 
 [node name="Jump" type="Node3D" parent="Obstacles" unique_id=789942965]
 

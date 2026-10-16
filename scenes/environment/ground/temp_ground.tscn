@@ -33,7 +33,7 @@ size = Vector3(1, 0.25, 10)
 
 [node name="TempGround" type="StaticBody3D" unique_id=337221563]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=36903909]
+[node name="TempGroundCollision" type="CollisionShape3D" parent="." unique_id=36903909]
 shape = SubResource("BoxShape3D_0yd1l")
 
 [node name="LeftLane" type="MeshInstance3D" parent="." unique_id=1683262230]

@@ -1,22 +1,40 @@
 [gd_scene format=3 uid="uid://cl8dl2kd2sm1i"]
 
 [ext_resource type="Script" uid="uid://dacski64kkbbf" path="res://assets/scripts/player/player_controller.gd" id="1_4q5nu"]
+[ext_resource type="Script" uid="uid://c8hv5wbhw8yv6" path="res://scenes/player/attack_cast.gd" id="2_iivv4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0yd1l"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_0yd1l"]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kps3k"]
+radius = 0.58
+height = 2.015
+
 [node name="PlayerController" type="CharacterBody3D" unique_id=874567396]
 script = ExtResource("1_4q5nu")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=311135463]
+[node name="BaseCollision" type="CollisionShape3D" parent="." unique_id=311135463]
 shape = SubResource("CapsuleShape3D_0yd1l")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=742398682]
+[node name="BaseMesh" type="MeshInstance3D" parent="." unique_id=742398682]
 mesh = SubResource("CapsuleMesh_0yd1l")
 
 [node name="Camera_Controller" type="Node3D" parent="." unique_id=1370970947]
-transform = Transform3D(1, 0, 0, 0, 0.8325947, 0.5538829, 0, -0.5538829, 0.8325947, 0.002449274, 2.1053083, 2.8743176)
+transform = Transform3D(1, 0, 0, 0, 0.931288, 0.36428404, 0, -0.36428404, 0.931288, 0.002449274, 1.7372153, 3.1836946)
 
 [node name="Camera3D" type="Camera3D" parent="Camera_Controller" unique_id=666543645]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 0.047700975, 0.5, -0.9313055)
+fov = 57.5
+
+[node name="HurtZone" type="Area3D" parent="." unique_id=1803224088]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtZone" unique_id=567941906]
+shape = SubResource("CapsuleShape3D_kps3k")
+debug_color = Color(1, 0.019232832, 0.0017920041, 0.41960785)
+
+[node name="Attack" type="Node3D" parent="." unique_id=1133648674]
+
+[node name="AttackCast" type="RayCast3D" parent="Attack" unique_id=1543532439]
+unique_name_in_owner = true
+script = ExtResource("2_iivv4")

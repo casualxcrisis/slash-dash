@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://egqte8n832lp"]
+
+[ext_resource type="Script" uid="uid://dtasbymr5xgcu" path="res://assets/scripts/enemies/temp_enemy.gd" id="1_80iq4"]
+[ext_resource type="Texture2D" uid="uid://btww70ly2eviu" path="res://assets/textures/Prototyping Textures (32px)/Prototype_red_32x32px.png" id="1_ek1i4"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kps3k"]
+radius = 1.019
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80iq4"]
+albedo_texture = ExtResource("1_ek1i4")
+uv1_scale = Vector3(11.5, 4.8, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_0yd1l"]
+material = SubResource("StandardMaterial3D_80iq4")
+radius = 0.995
+height = 1.95
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0yd1l"]
+radius = 1.255
+
+[node name="TempEnemy" type="AnimatableBody3D" unique_id=248807533 groups=["enemy"]]
+script = ExtResource("1_80iq4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1885851485]
+shape = SubResource("SphereShape3D_kps3k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1796418334]
+mesh = SubResource("SphereMesh_0yd1l")
+
+[node name="KillHurtZone" type="Area3D" parent="." unique_id=1052804548]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KillHurtZone" unique_id=118487519]
+shape = SubResource("SphereShape3D_0yd1l")
