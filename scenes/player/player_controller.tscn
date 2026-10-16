@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cl8dl2kd2sm1i"]
 
 [ext_resource type="Script" uid="uid://dacski64kkbbf" path="res://assets/scripts/player/player_controller.gd" id="1_4q5nu"]
+[ext_resource type="Script" uid="uid://bgqssfkefhr05" path="res://assets/scripts/player/score_hud.gd" id="2_0cfoe"]
+[ext_resource type="Script" uid="uid://25uw4yrqko5c" path="res://assets/scripts/player/health_hud.gd" id="2_0nonk"]
 [ext_resource type="Script" uid="uid://c8hv5wbhw8yv6" path="res://assets/scripts/player/attack_cast.gd" id="2_iivv4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0yd1l"]
@@ -24,6 +26,25 @@ mesh = SubResource("CapsuleMesh_0yd1l")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=666543645]
 transform = Transform3D(1, 0, 0, 0, 0.8728372, 0.48801157, 0, -0.48801157, 0.8728372, 0.0314779, 2.2620666, 2.3148236)
 fov = 57.5
+
+[node name="Health" type="Label" parent="Camera3D" unique_id=1318841856]
+unique_name_in_owner = true
+offset_left = 833.0
+offset_top = 1.0
+offset_right = 1156.0
+offset_bottom = 84.0
+theme_override_font_sizes/font_size = 37
+script = ExtResource("2_0nonk")
+
+[node name="Score" type="Label" parent="Camera3D" unique_id=1185504792]
+unique_name_in_owner = true
+offset_left = 15.0
+offset_top = 2.0
+offset_right = 152.0
+offset_bottom = 61.0
+theme_override_font_sizes/font_size = 43
+text = "Score: "
+script = ExtResource("2_0cfoe")
 
 [node name="HurtPickupZone" type="Area3D" parent="." unique_id=1803224088 groups=["player"]]
 
