@@ -45,4 +45,6 @@ func _on_hurt_pickup_zone_body_entered(body: Node3D) -> void:
 	if body.is_in_group("enemy"):
 		Global.player_health -= 20
 		body.queue_free()
+		
 		print("You got hurt! Player Health: ", Global.player_health)
+		

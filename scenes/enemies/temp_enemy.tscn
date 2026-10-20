@@ -15,9 +15,6 @@ material = SubResource("StandardMaterial3D_80iq4")
 radius = 0.995
 height = 1.95
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_0yd1l"]
-radius = 1.025
-
 [node name="TempEnemy" type="AnimatableBody3D" unique_id=248807533 groups=["enemy"]]
 script = ExtResource("1_80iq4")
 
@@ -26,8 +23,3 @@ shape = SubResource("SphereShape3D_kps3k")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1796418334]
 mesh = SubResource("SphereMesh_0yd1l")
-
-[node name="HurtZone" type="Area3D" parent="." unique_id=1052804548 groups=["enemy"]]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtZone" unique_id=118487519]
-shape = SubResource("SphereShape3D_0yd1l")

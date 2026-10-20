@@ -82,100 +82,106 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9982619, 0.62500024, -18.80
 [node name="Dodge" type="Node3D" parent="Obstacles" unique_id=109071668]
 
 [node name="temp_dodge_block" parent="Obstacles/Dodge" unique_id=2100093211 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48949736, 1.125, -18.906572)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48949736, 1.6557851, -18.906572)
 
 [node name="temp_dodge_block3" parent="Obstacles/Dodge" unique_id=164179787 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9869865, 1.125, -30.505205)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9869865, 1.6557851, -30.505205)
 
 [node name="temp_dodge_block5" parent="Obstacles/Dodge" unique_id=433247614 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9869865, 1.125, -41.064228)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9869865, 1.6557851, -41.064228)
 
 [node name="temp_dodge_block4" parent="Obstacles/Dodge" unique_id=124082090 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0071425, 1.125, -30.505205)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0071425, 1.6557851, -30.505205)
 
 [node name="temp_dodge_block17" parent="Obstacles/Dodge" unique_id=679262049 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9869865, 1.125, -75.09499)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9869865, 1.6557851, -75.09499)
 
 [node name="temp_dodge_block21" parent="Obstacles/Dodge" unique_id=780209354 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9869865, 1.125, -80.61001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9869865, 1.6557851, -80.61001)
 
 [node name="temp_dodge_block26" parent="Obstacles/Dodge" unique_id=368902042 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9688147, 1.125, -87.5324)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9688147, 1.6557851, -87.5324)
 
 [node name="temp_dodge_block22" parent="Obstacles/Dodge" unique_id=577487295 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4855144, 1.125, -80.61001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4855144, 1.6557851, -80.61001)
 
 [node name="temp_dodge_block23" parent="Obstacles/Dodge" unique_id=2051560436 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5055866, 1.125, -80.61001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5055866, 1.6557851, -80.61001)
 
 [node name="temp_dodge_block27" parent="Obstacles/Dodge" unique_id=407838038 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9869865, 1.125, -94.24798)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9869865, 1.6557851, -94.24798)
 
 [node name="temp_dodge_block28" parent="Obstacles/Dodge" unique_id=473530460 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4855144, 1.125, -94.24798)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4855144, 1.6557851, -94.24798)
 
 [node name="temp_dodge_block29" parent="Obstacles/Dodge" unique_id=113570985 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5055866, 1.125, -94.24798)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5055866, 1.6557851, -94.24798)
 
 [node name="temp_dodge_block24" parent="Obstacles/Dodge" unique_id=163408415 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4855144, 1.125, -87.47489)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4855144, 1.6557851, -87.47489)
 
 [node name="temp_dodge_block25" parent="Obstacles/Dodge" unique_id=1240546853 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5055866, 1.125, -87.47489)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5055866, 1.6557851, -87.47489)
 
 [node name="temp_dodge_block18" parent="Obstacles/Dodge" unique_id=1230198868 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0071425, 1.125, -75.09499)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0071425, 1.6557851, -75.09499)
 
 [node name="temp_dodge_block2" parent="Obstacles/Dodge" unique_id=687356727 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4876697, 1.125, -18.906572)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4876697, 1.6557851, -18.906572)
 
 [node name="temp_dodge_block6" parent="Obstacles/Dodge" unique_id=238923068 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48949736, 1.125, -41.10445)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48949736, 1.6557851, -41.10445)
 
 [node name="temp_dodge_block9" parent="Obstacles/Dodge" unique_id=29115856 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48949736, 1.125, -41.10445)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48949736, 1.6557851, -41.10445)
 
 [node name="temp_dodge_block7" parent="Obstacles/Dodge" unique_id=1583758136 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4876697, 1.125, -41.10445)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4876697, 1.6557851, -41.10445)
 
 [node name="temp_dodge_block10" parent="Obstacles/Dodge" unique_id=1419600575 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48949736, 1.125, -51.150845)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48949736, 1.6557851, -51.150845)
 
 [node name="temp_dodge_block11" parent="Obstacles/Dodge" unique_id=494752078 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4876697, 1.125, -51.150845)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4876697, 1.6557851, -51.150845)
 
 [node name="temp_dodge_block8" parent="Obstacles/Dodge" unique_id=1841220975 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9536562, 1.125, -51.161125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9536562, 1.6557851, -51.161125)
 
 [node name="temp_dodge_block12" parent="Obstacles/Dodge" unique_id=852456696 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48740917, 1.1261792, -59.08089)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48740917, 1.6569643, -59.08089)
 
 [node name="temp_dodge_block13" parent="Obstacles/Dodge" unique_id=1209090002 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.489758, 1.1261792, -59.08089)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.489758, 1.6569643, -59.08089)
 
 [node name="temp_dodge_block19" parent="Obstacles/Dodge" unique_id=1671857848 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48740917, 1.1261792, -64.27003)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48740917, 1.6569643, -64.27003)
 
 [node name="temp_dodge_block20" parent="Obstacles/Dodge" unique_id=658709122 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.489758, 1.1261792, -64.27003)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.489758, 1.6569643, -64.27003)
 
 [node name="temp_dodge_block14" parent="Obstacles/Dodge" unique_id=407206548 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9559741, 1.125, -59.089043)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9559741, 1.6557851, -59.089043)
 
 [node name="temp_dodge_block15" parent="Obstacles/Dodge" unique_id=1245112045 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0439863, 1.125, -70.13361)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0439863, 1.6557851, -70.13361)
 
 [node name="temp_dodge_block16" parent="Obstacles/Dodge" unique_id=1867901682 instance=ExtResource("5_qd0o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0005994, 1.125, -70.13361)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0005994, 1.6557851, -70.13361)
+
+[node name="Pickups" type="Node3D" parent="." unique_id=1178301788]
+
+[node name="Coins" type="Node3D" parent="Pickups" unique_id=106072967]
+
+[node name="PickupCoin" parent="Pickups/Coins" unique_id=82873739 instance=ExtResource("7_pvbb1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9836655, 1.2246853, -16.22847)
+
+[node name="Health" type="Node3D" parent="Pickups" unique_id=1270790928]
+
+[node name="PickupHealth" parent="Pickups/Health" unique_id=1943708598 instance=ExtResource("8_0bul0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15447426, 1.0931773, -46.18779)
 
 [node name="PlayerController" parent="." unique_id=874567396 instance=ExtResource("1_1ykrc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, 1.9653994)
 fall_acceleration = 82
 
 [node name="PlaceHolderSky" parent="." unique_id=1052989512 instance=ExtResource("2_ycx7s")]
-
-[node name="PickupCoin" parent="." unique_id=82873739 instance=ExtResource("7_pvbb1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9836655, 1.2246853, -16.22847)
-
-[node name="PickupHealth" parent="." unique_id=1943708598 instance=ExtResource("8_0bul0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15447426, 1.0931773, -46.18779)
