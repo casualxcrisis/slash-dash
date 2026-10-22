@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cwtdjo1u2xv36" path="res://assets/editor/Prototyping Textures (32px)/Prototype_orange_32x32px.png" id="1_k84bc"]
 [ext_resource type="Script" uid="uid://di5hde60x183u" path="res://assets/scripts/obstacles/jump_spikes.gd" id="2_8devm"]
-[ext_resource type="Script" uid="uid://b7n5gegtv1nvy" path="res://scenes/environment/obstacles/death_zone.gd" id="3_uqc1g"]
+[ext_resource type="Script" uid="uid://b7n5gegtv1nvy" path="res://assets/scripts/obstacles/death_zone.gd" id="3_uqc1g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7mw5"]
 albedo_texture = ExtResource("1_k84bc")
