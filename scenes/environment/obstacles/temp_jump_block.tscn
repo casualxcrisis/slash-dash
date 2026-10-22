@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dcn6xhdh6mjct"]
 
 [ext_resource type="Texture2D" uid="uid://cwtdjo1u2xv36" path="res://assets/editor/Prototyping Textures (32px)/Prototype_orange_32x32px.png" id="1_k84bc"]
+[ext_resource type="Script" uid="uid://di5hde60x183u" path="res://assets/scripts/obstacles/jump_spikes.gd" id="2_8devm"]
+[ext_resource type="Script" uid="uid://b7n5gegtv1nvy" path="res://scenes/environment/obstacles/death_zone.gd" id="3_uqc1g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7mw5"]
 albedo_texture = ExtResource("1_k84bc")
@@ -11,6 +13,12 @@ uv1_scale = Vector3(3.035, 2.025, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_kps3k"]
 size = Vector3(1.05, 1.045, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0yd1l"]
+size = Vector3(1, 0.06, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sc5ad"]
+size = Vector3(0.81, 0.035, 1)
+
 [node name="TempJumpBlock" type="StaticBody3D" unique_id=355025997]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1122273009]
@@ -20,3 +28,23 @@ mesh = SubResource("BoxMesh_kps3k")
 [node name="TempJumpCollision" type="CollisionShape3D" parent="." unique_id=1012121077]
 shape = SubResource("BoxShape3D_kps3k")
 debug_color = Color(0.31764707, 0.4627451, 0.91764706, 0.69803923)
+
+[node name="Damage" type="Node3D" parent="." unique_id=2105923817]
+
+[node name="JumpSpikes" type="Area3D" parent="Damage" unique_id=949092120]
+script = ExtResource("2_8devm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Damage/JumpSpikes" unique_id=1804124209]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5349586, 0)
+shape = SubResource("BoxShape3D_0yd1l")
+
+[node name="DeathZone" type="Area3D" parent="Damage" unique_id=1729976199]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -0.0058039427)
+script = ExtResource("3_uqc1g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Damage/DeathZone" unique_id=2096439948]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.5235728, 0.022324085, -4.6092755e-08)
+shape = SubResource("BoxShape3D_sc5ad")
+
+[connection signal="area_entered" from="Damage/JumpSpikes" to="Damage/JumpSpikes" method="_on_area_entered"]
+[connection signal="area_entered" from="Damage/DeathZone" to="Damage/DeathZone" method="_on_area_entered"]
