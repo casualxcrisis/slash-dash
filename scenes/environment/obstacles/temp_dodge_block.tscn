@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bgejbdy2e6efk"]
 
 [ext_resource type="Texture2D" uid="uid://cwtdjo1u2xv36" path="res://assets/editor/Prototyping Textures (32px)/Prototype_orange_32x32px.png" id="1_ec2cp"]
-[ext_resource type="Script" uid="uid://csk52gx40kc40" path="res://assets/scripts/obstacles/side_spikes.gd" id="2_5f205"]
 [ext_resource type="Script" uid="uid://ka4kn3df5vtn" path="res://assets/scripts/obstacles/dodge_death_zone.gd" id="3_u0fwb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uf4lm"]
@@ -14,11 +13,8 @@ size = Vector3(1, 3, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ec2cp"]
 size = Vector3(1, 3, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_0yd1l"]
-size = Vector3(0.05, 3, 0.675)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_kps3k"]
-size = Vector3(0.765, 2.86, 0.08)
+size = Vector3(0.31, 2.755, 0.08)
 
 [node name="TempDodgeBlock" type="StaticBody3D" unique_id=2100093211]
 
@@ -32,17 +28,6 @@ shape = SubResource("BoxShape3D_ec2cp")
 
 [node name="Damage" type="Node3D" parent="." unique_id=841482765]
 
-[node name="SideSpikes" type="Area3D" parent="Damage" unique_id=1242888901]
-script = ExtResource("2_5f205")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Damage/SideSpikes" unique_id=136644733]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50040793, 0, 0.0060138106)
-shape = SubResource("BoxShape3D_0yd1l")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Damage/SideSpikes" unique_id=1302984769]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4928875, 0, 0.0060138106)
-shape = SubResource("BoxShape3D_0yd1l")
-
 [node name="DeathZone" type="Area3D" parent="Damage" unique_id=1536373533]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.17420906)
 script = ExtResource("3_u0fwb")
@@ -51,5 +36,4 @@ script = ExtResource("3_u0fwb")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.35233837)
 shape = SubResource("BoxShape3D_kps3k")
 
-[connection signal="area_entered" from="Damage/SideSpikes" to="Damage/SideSpikes" method="_on_area_entered"]
 [connection signal="area_entered" from="Damage/DeathZone" to="Damage/DeathZone" method="_on_area_entered"]

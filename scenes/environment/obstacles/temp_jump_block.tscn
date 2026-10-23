@@ -17,7 +17,7 @@ size = Vector3(1.05, 1.045, 1)
 size = Vector3(1, 0.06, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sc5ad"]
-size = Vector3(0.81, 0.035, 1)
+size = Vector3(0.845, 0.035, 0.575)
 
 [node name="TempJumpBlock" type="StaticBody3D" unique_id=355025997]
 
@@ -43,7 +43,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 script = ExtResource("3_uqc1g")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Damage/DeathZone" unique_id=2096439948]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.5235728, 0.022324085, -4.6092755e-08)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.5235728, -0.0010875463, -4.6092755e-08)
 shape = SubResource("BoxShape3D_sc5ad")
 
 [connection signal="area_entered" from="Damage/JumpSpikes" to="Damage/JumpSpikes" method="_on_area_entered"]
