@@ -25,6 +25,10 @@ Signals="*uid://cw4xylisv6qn0"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/unibuilder/plugin.cfg")
+
 [global_group]
 
 enemy=""

@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("move_right") and target_lane < Lane.LEFT:
 		target_lane += 1
 	#auto run
-	target_velocity.z = speed
+	#target_velocity.z = speed
 	#set movement
 	velocity = target_velocity
 	move_and_slide()
@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 #hurt player if they touch enemy
 func _on_hurt_pickup_zone_body_entered(body: Node3D) -> void:
 	if body.is_in_group("enemy"):
-		Global.player_health -= 20
+		Global.player_health -= Global.enemy_dmg
 		body.queue_free()
 		
 		print("You got hurt! Player Health: ", Global.player_health)

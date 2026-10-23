@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("attack") && is_colliding() && enemy.is_in_group("enemy"):
 			get_collider().queue_free()
 			%Slash.visible = false
-			Global.player_score += 100
+			Global.player_score += Global.enemy_score
 	
 		
 
