@@ -11,3 +11,7 @@ var high_score = 0
 #enemy
 var enemy_dmg = 20
 var enemy_score = 100
+
+#pickups
+var health_amt = 10
+var health_scr = 10
