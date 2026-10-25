@@ -2,5 +2,5 @@ extends Label
 
 
 func _process(delta: float) -> void:
-	var score_string = var_to_str(Global.player_score)
-	%Score.set_text("Score: " + score_string)
+	var score_string = var_to_str(Global.current_score)
+	%ScoreHUD.set_text("Score: " + score_string)

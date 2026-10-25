@@ -33,6 +33,7 @@ enabled=PackedStringArray("res://addons/unibuilder/plugin.cfg")
 
 enemy=""
 player=""
+time_pickup=""
 
 [input]
 

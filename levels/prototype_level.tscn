@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dcn6xhdh6mjct" path="res://scenes/environment/obstacles/temp_jump_block.tscn" id="4_6lfjr"]
 [ext_resource type="PackedScene" uid="uid://bgejbdy2e6efk" path="res://scenes/environment/obstacles/temp_dodge_block.tscn" id="5_qd0o6"]
 [ext_resource type="PackedScene" uid="uid://c7a0rm638h68" path="res://scenes/pickups/pickup_coin.tscn" id="7_pvbb1"]
-[ext_resource type="PackedScene" uid="uid://dci7biv58x8oy" path="res://scenes/pickups/pickup_health.tscn" id="8_0bul0"]
+[ext_resource type="PackedScene" uid="uid://dci7biv58x8oy" path="res://scenes/pickups/pickup_time.tscn" id="8_0bul0"]
 
 [node name="PrototypeLevel" type="Node3D" unique_id=1175846320]
 

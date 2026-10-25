@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dacski64kkbbf" path="res://assets/scripts/player/player_controller.gd" id="1_4q5nu"]
 [ext_resource type="Script" uid="uid://bgqssfkefhr05" path="res://assets/scripts/player/score_hud.gd" id="2_0cfoe"]
-[ext_resource type="Script" uid="uid://25uw4yrqko5c" path="res://assets/scripts/player/health_hud.gd" id="2_0nonk"]
 [ext_resource type="Script" uid="uid://c8hv5wbhw8yv6" path="res://assets/scripts/player/attack_cast.gd" id="2_iivv4"]
+[ext_resource type="Script" uid="uid://uvg1k8l2ykr2" path="res://assets/scripts/player/game_timer.gd" id="4_5afdu"]
+[ext_resource type="Script" uid="uid://ccu1pcsg5sqr3" path="res://assets/scripts/player/timer_hud.gd" id="4_5tt2p"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0yd1l"]
 
@@ -24,26 +25,16 @@ shape = SubResource("CapsuleShape3D_0yd1l")
 mesh = SubResource("CapsuleMesh_0yd1l")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=666543645]
-transform = Transform3D(1, 0, 0, 0, 0.8728372, 0.48801157, 0, -0.48801157, 0.8728372, 0.0314779, 2.2620666, 2.3148236)
+transform = Transform3D(1, 0, 0, 0, 0.9329088, 0.3601129, 0, -0.3601129, 0.9329088, 0, 1.8460318, 2.74783)
 fov = 57.5
 
-[node name="Health" type="Label" parent="Camera3D" unique_id=1318841856]
-unique_name_in_owner = true
-offset_left = 833.0
-offset_top = 1.0
-offset_right = 1156.0
-offset_bottom = 84.0
-theme_override_font_sizes/font_size = 37
-script = ExtResource("2_0nonk")
-
-[node name="Score" type="Label" parent="Camera3D" unique_id=1185504792]
+[node name="ScoreHUD" type="Label" parent="Camera3D" unique_id=1185504792]
 unique_name_in_owner = true
 offset_left = 15.0
 offset_top = 2.0
 offset_right = 152.0
 offset_bottom = 61.0
 theme_override_font_sizes/font_size = 43
-text = "Score: "
 script = ExtResource("2_0cfoe")
 
 [node name="Slash" type="Label" parent="Camera3D" unique_id=910664555]
@@ -62,6 +53,18 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 31
 text = "SLASH!"
 
+[node name="TimerHUD" type="Label" parent="Camera3D" unique_id=724544363]
+unique_name_in_owner = true
+offset_left = 569.0
+offset_top = 8.0
+offset_right = 609.0
+offset_bottom = 31.0
+script = ExtResource("4_5tt2p")
+
+[node name="GameTimer" type="Timer" parent="Camera3D/TimerHUD" unique_id=349492978]
+unique_name_in_owner = true
+script = ExtResource("4_5afdu")
+
 [node name="HurtPickupZone" type="Area3D" parent="." unique_id=1803224088 groups=["player"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HurtPickupZone" unique_id=567941906]
@@ -75,4 +78,4 @@ unique_name_in_owner = true
 script = ExtResource("2_iivv4")
 attack_range = 2.8
 
-[connection signal="body_entered" from="HurtPickupZone" to="." method="_on_hurt_pickup_zone_body_entered"]
+[connection signal="body_entered" from="HurtPickupZone" to="Camera3D/TimerHUD/GameTimer" method="_on_hurt_pickup_zone_body_entered"]

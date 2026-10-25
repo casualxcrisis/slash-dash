@@ -1,7 +1,23 @@
 [gd_scene format=3 uid="uid://dci7biv58x8oy"]
 
-[ext_resource type="Script" uid="uid://darlgxoeej0n1" path="res://assets/scripts/pickups/pickup_health.gd" id="1_6ubt3"]
 [ext_resource type="Texture2D" uid="uid://b48gykheh7ov5" path="res://assets/editor/Prototyping Textures (32px)/Prototype_green_lime_32x32px.png" id="1_a7kr8"]
+
+[sub_resource type="GDScript" id="GDScript_ia2pv"]
+script/source = "extends AnimatableBody3D
+
+
+
+
+func _on_pickup_area_area_entered(area: Area3D) -> void:
+	if area.is_in_group(\"player\"):
+		if Global.player_health < 100:
+			Global.player_health += Global.health_amt
+			print(\"Player got 10 health.\")
+		elif Global.player_health == 100:
+			Global.player_score += Global.health_scr
+			print(\"Health is full, 10 pts!\")
+		self.queue_free()
+"
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_cu4ke"]
 radius = 0.645
@@ -13,22 +29,11 @@ uv1_scale = Vector3(4.585, 2.78, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_crplj"]
 material = SubResource("StandardMaterial3D_6ubt3")
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_0yd1l"]
-radius = 0.695
-
-[node name="PickupHealth" type="AnimatableBody3D" unique_id=1943708598]
-script = ExtResource("1_6ubt3")
+[node name="PickupTime" type="AnimatableBody3D" unique_id=1943708598 groups=["time_pickup"]]
+script = SubResource("GDScript_ia2pv")
 
 [node name="BaseCollision" type="CollisionShape3D" parent="." unique_id=575550910]
 shape = SubResource("SphereShape3D_cu4ke")
 
 [node name="BaseMesh" type="MeshInstance3D" parent="." unique_id=84365395]
 mesh = SubResource("SphereMesh_crplj")
-
-[node name="PickupArea" type="Area3D" parent="." unique_id=1804816608]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PickupArea" unique_id=444083529]
-shape = SubResource("SphereShape3D_0yd1l")
-debug_color = Color(0.5698604, 0.55651116, 7.70092e-07, 0.41960785)
-
-[connection signal="area_entered" from="PickupArea" to="." method="_on_pickup_area_area_entered"]
