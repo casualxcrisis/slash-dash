@@ -5,6 +5,6 @@ extends AnimatableBody3D
 
 func _on_pickup_area_area_entered(area: Area3D) -> void:
 	if area.is_in_group("player"):
-		Global.player_score += coin_value
-		print("Coin picked up. Score: ", Global.player_score)
+		Global.current_score += coin_value
+		print("Coin picked up. Score: ", Global.current_score)
 		self.queue_free()
