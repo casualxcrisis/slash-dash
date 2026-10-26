@@ -2,7 +2,7 @@ extends Timer
 
 func _ready() -> void:
 	%GameTimer.wait_time = Global.base_time
-	%GameTimer.autostart = true
+	%GameTimer.autostart = true # may need to change for tutorial level functionality -- have set to false and then have an area3D trigger the timer start when player makes it to main level
 
 func _on_hurt_pickup_zone_body_entered(body: Node3D) -> void:
 	#enemy removes time

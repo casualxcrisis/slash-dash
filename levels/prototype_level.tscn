@@ -22,7 +22,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.963178)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.914255)
 
 [node name="TempGround4" parent="Ground" unique_id=1865713815 instance=ExtResource("1_htrvu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.4915357, 0, -29.904034)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010772705, 0, -29.904034)
 
 [node name="TempGround5" parent="Ground" unique_id=358893223 instance=ExtResource("1_htrvu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.798965)
